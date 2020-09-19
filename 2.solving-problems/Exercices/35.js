@@ -54,23 +54,4 @@ function areThereDuplacates1() {
   return false;
 }
 
-// using frequencyCounter
-function areThereDuplacates2() {
-  let content = Array.from(arguments);
-  let pointer = 0;
-  let count = 1;
-  for (let i = 0; i < content.length; i++) {
-    if (content[i] !== content[pointer]) {
-      count++;
-      pointer = i;
-    } else {
-      count = 0;
-    }
-    if (count > 1) {
-      return true;
-    }
-  }
-  return false;
-}
-
 console.log(areThereDuplacates2(1, 2, 3));
