@@ -36,21 +36,9 @@
     flatten([[1],[2],[3]])  [1,2,3]
     flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]])  [1,2,3
 
-    Exercice 4.
-    Write a function called capitalizeFirst that capitalize the first letter 
-
-    // capitalizeFirst(['car','taco','banana']); // ['Car','Taco','Banana']
  */
 
 //  ------------------------------------------- Inputs
-
-var obj2 = {
-  a: 2,
-  b: { b: 2, bb: { b: 3, bb: { b: 2 } } },
-  c: { c: { c: 2 }, cc: "ball", ccc: 5 },
-  d: 1,
-  e: { e: { e: 2 }, ee: "car" },
-};
 
 function isOdd(val) {
   return val % 2 !== 0;
@@ -61,27 +49,6 @@ function isOdd(val) {
 function reverse(str) {
   if (str.length <= 1) return str;
   return reverse(str.slice(1)) + str[0];
-}
-
-function capitalizeFirst(arr) {
-  if (arr.length === 0) return [];
-  const firstLetter = arr[0][0];
-  const restOfWord = arr[0].slice(1);
-  const firstLetterCapital = firstLetter.toUpperCase();
-  const firstWordCapitalized = firstLetterCapital + restOfWord;
-  return [firstWordCapitalized].concat(capitalizeFirst(arr.slice(1)));
-}
-
-function nestedEvenSum(obj, totalNumbers = 0) {
-  for (let key in obj) {
-    if (typeof obj[key] === "number" && obj[key] % 2 === 0) {
-      totalNumbers += obj[key];
-    } else if (typeof obj[key] === "object") {
-      totalNumbers += nestedEvenSum(obj[key]);
-    }
-  }
-
-  return totalNumbers;
 }
 
 // this function could call firstCaracterEqualLast.
@@ -111,5 +78,3 @@ function flatten(arr, out = []) {
   }
   return newArray;
 }
-
-console.log(flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]));
