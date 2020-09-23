@@ -12,6 +12,6 @@
     Javascript sort() method.
 
     // if negative order is num1,num2 else num2,num1
-    [4,6,16,10].sort((num1,num2) => num1 - num2);
+    [4,6,16,10].sort((num1,num2) => num1 - num2) - [4,6,10,16]
 
-*/
+* /

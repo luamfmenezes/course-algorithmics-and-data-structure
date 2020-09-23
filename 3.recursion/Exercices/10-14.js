@@ -31,6 +31,10 @@
     recursiveRange(6) - 21
     recursiveRange(10) - 55 
 
+    Exercice 5. 
+
+    Writhe a function called fib that returns the fibonacci sequence.
+
 */
 
 function power(num, expo) {

@@ -5,9 +5,12 @@
     Perform very well with a lot of data > 100k
 
     Complexity -> O(n * log(n))
+    n -> cames from the comparations in merge
+
+    Space complexity -> O(n)
 
     Merge()
-    this should be O(n + m)
+    this should be O(n + m) ~ O(n)
 
 */
 
@@ -56,6 +59,7 @@ function merge2(arr1, arr2) {
   return result;
 }
 
+// my implementation
 function mergeSort(arr) {
   let newArrays = [];
 
@@ -74,10 +78,13 @@ function mergeSort(arr) {
 
 function mergeSort2(arr) {
   if (arr.length <= 1) return arr;
+
   let mid = Math.floor(arr.length / 2);
+
   let left = mergeSort(arr.slice(0, mid));
+
   let right = mergeSort(arr.slice(mid));
-  console.log(left, right);
+
   return merge(left, right);
 }
 

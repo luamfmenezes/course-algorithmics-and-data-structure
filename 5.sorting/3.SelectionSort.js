@@ -4,6 +4,13 @@
     Similar to bubble sort, but insted of first, placing large values into sorted position,
     it places small values into sorted positions.
 
+    It's not so good because the time complexity ~ n²
+
+    Time complexity O(n * m ~ n²)
+
+    comparasion with bubble sort.
+    decresi the number of swap.
+
 */
 
 function selectionSort(arr) {
