@@ -9,6 +9,10 @@
     -----> B -------> C  ------>
     --> D --> E --> N --> D --->
 
+    Use cases.
+
+    DFS, InOrder ->  
+
 */
 
 class Node {
