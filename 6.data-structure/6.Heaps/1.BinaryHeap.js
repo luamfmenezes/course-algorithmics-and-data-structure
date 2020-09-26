@@ -12,6 +12,8 @@
     Use case:
     1. Priority queues.
     2. Used with graphs
+
+    
 */
 
 class MaxBinaryHeap {
