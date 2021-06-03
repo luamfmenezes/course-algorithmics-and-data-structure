@@ -85,6 +85,24 @@ function createGraph() {
     return result;
   };
 
+  const breadthFirstIterative = (start) => {
+    const queue = [start];
+    const visisted = { [start]: true };
+    const result = [];
+
+    while (queue.length) {
+      let currentVertex = queue.shift();
+      result.push(currentVertex);
+      adjacencyList[currentVertex].forEach((neighbor) => {
+        if (!visisted[neighbor]) {
+          visisted[neighbor] = true;
+          queue.push(neighbor);
+        }
+      });
+    }
+    return result;
+  };
+
   return {
     adjacencyList,
     addVertex,
@@ -93,6 +111,7 @@ function createGraph() {
     removeVertex,
     depthFirstRecursive,
     depthFirstIterative,
+    breadthFirstIterative,
   };
 }
 
